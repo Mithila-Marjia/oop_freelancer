@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="473.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancerproject.Admin.PolicyFxml">
+   <children>
+      <Label layoutX="165.0" layoutY="21.0" prefHeight="35.0" prefWidth="314.0" text="Manage Rules and Policies">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="67.0" text="Rule Title" />
+      <TextField layoutX="45.0" layoutY="112.0" />
+      <Label layoutX="45.0" layoutY="163.0" prefHeight="17.0" prefWidth="77.0" text="Description" />
+      <TextArea layoutX="47.0" layoutY="202.0" prefHeight="169.0" prefWidth="482.0" />
+      <Button layoutX="194.0" layoutY="395.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="208.0" text="Update" />
+   </children>
+</AnchorPane>

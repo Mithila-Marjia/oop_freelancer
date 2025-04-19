@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancerproject.Admin.ComplainFxml">
+   <children>
+      <Label fx:id="manageLabel" layoutX="223.0" layoutY="31.0" text="Manage Disputes">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="statusComboBox" layoutX="35.0" layoutY="77.0" prefWidth="150.0" promptText="Open" />
+      <TableView fx:id="disputeTableView" layoutY="131.0" prefHeight="269.0" prefWidth="360.0">
+        <columns>
+          <TableColumn fx:id="idTableColumn" prefWidth="83.0" text="ID" />
+          <TableColumn fx:id="freelencerTableColumn" prefWidth="78.0" text="Freelancer" />
+            <TableColumn fx:id="clintTableColumn" prefWidth="88.0" text="Client" />
+            <TableColumn fx:id="complainTableColumn" prefWidth="110.0" text="Complain" />
+        </columns>
+      </TableView>
+      <Label fx:id="resolutionTextArea" layoutX="469.0" layoutY="81.0" text="Details">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="resolutionTextArea" layoutX="386.0" layoutY="131.0" prefHeight="88.0" prefWidth="200.0" />
+      <Button layoutX="443.0" layoutY="241.0" mnemonicParsing="false" onAction="#resolvedButton" text="Resolved">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
