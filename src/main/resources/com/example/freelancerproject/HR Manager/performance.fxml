@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="564.0" prefWidth="721.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancerproject.Hr.PerformanceController">
+   <children>
+      <Label layoutX="272.0" text="HR MANAGER" textFill="#0262fd">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Label>
+      <Label layoutX="272.0" layoutY="55.0" text="PERFORMANCE" textFill="#c237de">
+         <font>
+            <Font name="System Italic" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="108.0" text="NAME" />
+      <Label layoutX="23.0" layoutY="137.0" text="ID" />
+      <Label layoutX="29.0" layoutY="177.0" text="Gender" />
+      <Label layoutX="414.0" layoutY="108.0" text="RATING" />
+      <ComboBox fx:id="ratingcombobox" layoutX="492.0" layoutY="104.0" prefWidth="150.0" />
+      <TreeTableView fx:id="performancetable" layoutX="60.0" layoutY="258.0" prefHeight="200.0" prefWidth="561.0">
+        <columns>
+          <TreeTableColumn fx:id="nametablecolum" prefWidth="98.66672134399414" text="Name" />
+          <TreeTableColumn fx:id="idtablecolum" prefWidth="101.33335876464844" text="Id" />
+            <TreeTableColumn fx:id="gendertablecolum" prefWidth="120.6666259765625" text="Gender" />
+            <TreeTableColumn fx:id="ratingtablecolum" prefWidth="116.0" text="Rating" />
+            <TreeTableColumn fx:id="salarytablecolum" prefWidth="126.66671752929688" text="Salary" />
+        </columns>
+      </TreeTableView>
+      <Label layoutX="419.0" layoutY="145.0" text="Salary" />
+      <CheckBox fx:id="malecheckbox" layoutX="87.0" layoutY="177.0" mnemonicParsing="false" text="male" />
+      <CheckBox fx:id="femalecheckbox" layoutX="177.0" layoutY="177.0" mnemonicParsing="false" text="female" />
+      <TextField fx:id="salarytext" layoutX="492.0" layoutY="141.0" />
+      <TextField fx:id="nametext" layoutX="86.0" layoutY="104.0" />
+      <TextField fx:id="idtext" layoutX="86.0" layoutY="133.0" />
+      <Button layoutX="257.0" layoutY="207.0" mnemonicParsing="false" onAction="#addonclick" prefHeight="25.0" prefWidth="89.0" text="add" />
+      <TextField fx:id="errortext" layoutX="391.0" layoutY="207.0" prefHeight="38.0" prefWidth="265.0" />
+      <TextField fx:id="bestratingtext" layoutX="161.0" layoutY="488.0" />
+      <TextField fx:id="showbestsalarytext" layoutX="471.0" layoutY="488.0" />
+      <Button layoutX="61.0" layoutY="488.0" mnemonicParsing="false" onAction="#bestratingonclick" text="Best rating" />
+      <Button layoutX="341.0" layoutY="488.0" mnemonicParsing="false" onAction="#bestsalaryonclick" text="best salary" />
+      <Button layoutX="34.0" layoutY="19.0" mnemonicParsing="false" onAction="#backonclick" text="Back" />
+   </children>
+</AnchorPane>
