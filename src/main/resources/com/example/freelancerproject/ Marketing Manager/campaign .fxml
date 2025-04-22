@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="522.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancerproject.Marketing.CampaignController">
+   <children>
+      <Label layoutX="125.0" layoutY="14.0" prefHeight="56.0" prefWidth="400.0" text="MARKETING OFFICER" textFill="#5e0651">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="70.0" prefHeight="58.0" prefWidth="296.0" text="CAMPAIGN" textFill="#60860e">
+         <font>
+            <Font name="System Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <Button layoutX="248.0" layoutY="248.0" mnemonicParsing="false" onAction="#createcampaignonclick" text="create campaign" />
+      <TextField fx:id="campaignnametext" layoutX="131.0" layoutY="128.0" />
+      <CheckBox fx:id="daycheckbox" layoutX="108.0" layoutY="191.0" mnemonicParsing="false" text="DAY" />
+      <CheckBox fx:id="nightcheckbox" layoutX="195.0" layoutY="191.0" mnemonicParsing="false" text="NIGHT" />
+      <DatePicker fx:id="campaigndatepicker" layoutX="374.0" layoutY="128.0" />
+      <ComboBox fx:id="locationcombobox" layoutX="399.0" layoutY="175.0" prefWidth="150.0" />
+      <Label layoutX="33.0" layoutY="132.0" text="Campaign Name" />
+      <Label layoutX="33.0" layoutY="174.0" prefHeight="49.0" prefWidth="61.0" text="SHIFT" />
+      <Label layoutX="311.0" layoutY="132.0" text="Date" />
+      <Label layoutX="325.0" layoutY="182.0" prefHeight="17.0" prefWidth="61.0" text="Location" />
+      <TreeTableView fx:id="campaigntable" layoutX="51.0" layoutY="308.0" prefHeight="200.0" prefWidth="481.0">
+        <columns>
+          <TreeTableColumn fx:id="campaigntablecolum" prefWidth="94.66665649414062" text="CAMPAIGN" />
+          <TreeTableColumn fx:id="locationtablecolum" prefWidth="97.33331298828125" text="LOCATION" />
+            <TreeTableColumn fx:id="shifttablecolum" prefWidth="134.66668701171875" text="SHIFT" />
+            <TreeTableColumn fx:id="datetablecolum" prefWidth="154.0" text="DATE" />
+        </columns>
+      </TreeTableView>
+      <TextField fx:id="errortext" layoutX="399.0" layoutY="215.0" prefHeight="74.0" prefWidth="149.0" />
+      <Button layoutX="25.0" layoutY="29.0" mnemonicParsing="false" onAction="#backonclick" text="Back" />
+   </children>
+</AnchorPane>
