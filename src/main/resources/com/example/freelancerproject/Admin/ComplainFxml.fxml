@@ -9,30 +9,38 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancerproject.Admin.ComplainFxml">
    <children>
-      <Label fx:id="manageLabel" layoutX="223.0" layoutY="31.0" text="Manage Disputes">
+      <Label fx:id="manageLabel" layoutX="199.0" layoutY="6.0" prefHeight="60.0" prefWidth="220.0" text="Manage Disputes">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <ComboBox fx:id="statusComboBox" layoutX="35.0" layoutY="77.0" prefWidth="150.0" promptText="Open" />
-      <TableView fx:id="disputeTableView" layoutY="131.0" prefHeight="269.0" prefWidth="360.0">
+      <ComboBox fx:id="statusComboBox" layoutX="372.0" layoutY="100.0" prefHeight="53.0" prefWidth="228.0" promptText="Open" />
+      <TableView fx:id="disputeTableView" layoutY="77.0" prefHeight="323.0" prefWidth="360.0">
         <columns>
-          <TableColumn fx:id="idTableColumn" prefWidth="83.0" text="ID" />
-          <TableColumn fx:id="freelencerTableColumn" prefWidth="78.0" text="Freelancer" />
-            <TableColumn fx:id="clintTableColumn" prefWidth="88.0" text="Client" />
-            <TableColumn fx:id="complainTableColumn" prefWidth="110.0" text="Complain" />
+          <TableColumn fx:id="complainidTableColumn" prefWidth="100.0" text="Complain Id" />
+          <TableColumn fx:id="senderidTableColumn" prefWidth="102.0" text="Sender Id" />
+            <TableColumn fx:id="descriptionTableColumn" prefWidth="157.0" text="Description" />
         </columns>
       </TableView>
-      <Label fx:id="resolutionTextArea" layoutX="469.0" layoutY="81.0" text="Details">
+      <Label fx:id="detailsLable" layoutX="369.0" layoutY="175.0" text="Details">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <TextArea fx:id="resolutionTextArea" layoutX="386.0" layoutY="131.0" prefHeight="88.0" prefWidth="200.0" />
-      <Button layoutX="443.0" layoutY="241.0" mnemonicParsing="false" onAction="#resolvedButton" text="Resolved">
+      <TextArea fx:id="resolutionTextArea" layoutX="372.0" layoutY="200.0" prefHeight="88.0" prefWidth="228.0" promptText="complain details" />
+      <Button layoutX="408.0" layoutY="304.0" mnemonicParsing="false" onAction="#resolvedButton" text="Resolved">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="statusLabel" layoutX="372.0" layoutY="77.0" text="Status:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="499.0" layoutY="343.0" mnemonicParsing="false" onAction="#backButton" prefHeight="40.0" prefWidth="78.0" text="Back">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

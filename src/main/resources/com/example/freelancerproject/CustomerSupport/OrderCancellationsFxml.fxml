@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="419.0" prefWidth="529.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancerproject.CustomerSupport.OrderCancellationsFxml">
+   <children>
+      <Label fx:id="orderLable" layoutX="91.0" layoutY="14.0" prefHeight="35.0" prefWidth="393.0" text=" Order Cancellations and Refund">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="orderidLable" layoutX="76.0" layoutY="65.0" prefHeight="17.0" prefWidth="63.0" text="Order ID:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="receveridLable" layoutX="285.0" layoutY="65.0" text="Recever ID:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="senderidLable" layoutX="74.0" layoutY="146.0" prefHeight="17.0" prefWidth="80.0" text="Sender ID:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="cancellationLable" layoutX="290.0" layoutY="146.0" prefHeight="20.0" prefWidth="139.0" text="Cancellation Reason:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="commentLable" layoutX="77.0" layoutY="235.0" prefHeight="17.0" prefWidth="80.0" text="Comments:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="idTextField" layoutX="77.0" layoutY="100.0" prefHeight="46.0" prefWidth="149.0" promptText="ID">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="receveridTextField" layoutX="285.0" layoutY="100.0" prefHeight="39.0" prefWidth="149.0" promptText="ID">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="senderidTextfield" layoutX="77.0" layoutY="179.0" prefHeight="46.0" prefWidth="149.0" promptText="ID">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <ComboBox fx:id="reasonComboBox" layoutX="290.0" layoutY="179.0" prefHeight="46.0" prefWidth="149.0" promptText="Change of mind" />
+      <TextArea fx:id="commentsTextArea" layoutX="76.0" layoutY="270.0" prefHeight="63.0" prefWidth="370.0" promptText="TEXT">
+         <font>
+            <Font size="14.0" />
+         </font></TextArea>
+      <Button layoutX="90.0" layoutY="356.0" mnemonicParsing="false" onAction="#cancelButton" text="Cancel Order">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="265.0" layoutY="356.0" mnemonicParsing="false" onAction="#issueButton" text="Issue Refund">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="423.0" layoutY="366.0" mnemonicParsing="false" onAction="#backButton" prefHeight="35.0" prefWidth="75.0" text="Back">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
