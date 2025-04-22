@@ -9,29 +9,60 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="514.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancerproject.Admin.ChangeFreelancerFxml">
+<AnchorPane prefHeight="539.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancerproject.Admin.ChangeFreelancerFxml">
    <children>
-      <Label fx:id="editLable" layoutX="215.0" layoutY="14.0" prefHeight="35.0" prefWidth="183.0" text="Edit Freelancer">
+      <Label fx:id="addnewfreelencerLable" layoutX="215.0" layoutY="14.0" prefHeight="35.0" prefWidth="241.0" text="Add New Freelancer">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label fx:id="nameLable" layoutX="50.0" layoutY="61.0" prefHeight="17.0" prefWidth="52.0" text="Name:" />
-      <Label fx:id="emailLable" layoutX="50.0" layoutY="120.0" prefHeight="17.0" prefWidth="52.0" text="Email:" />
-      <Label fx:id="countryLable" layoutX="50.0" layoutY="174.0" prefHeight="17.0" prefWidth="52.0" text="Country:" />
-      <Label fx:id="skillsLable" layoutX="50.0" layoutY="247.0" prefHeight="17.0" prefWidth="52.0" text="Skills:" />
-      <Label fx:id="statusLable" layoutX="50.0" layoutY="317.0" prefHeight="17.0" prefWidth="52.0" text="Status:" />
-      <Label fx:id="rateLable" layoutX="50.0" layoutY="366.0" prefHeight="17.0" prefWidth="46.0" text="Rate:" />
-      <Label fx:id="memberLable" layoutX="50.0" layoutY="417.0" prefHeight="17.0" prefWidth="87.0" text="Member Since:" />
-      <TextField fx:id="nameTextField" layoutX="152.0" layoutY="57.0" prefHeight="25.0" prefWidth="217.0" promptText="Enter name" />
-      <TextField fx:id="emailTextField" layoutX="152.0" layoutY="116.0" prefHeight="25.0" prefWidth="217.0" promptText="Enter email" />
-      <ComboBox fx:id="countryComboBox" layoutX="153.0" layoutY="170.0" prefHeight="25.0" prefWidth="217.0" promptText="Select country" />
-      <TextArea fx:id="skillsTextArea" layoutX="148.0" layoutY="218.0" prefHeight="75.0" prefWidth="224.0" promptText="List skills" />
-      <ComboBox fx:id="statusComboBox" layoutX="153.0" layoutY="313.0" prefHeight="25.0" prefWidth="217.0" promptText="Select status" />
-      <TextField fx:id="rateTextField" layoutX="153.0" layoutY="364.0" prefHeight="32.0" prefWidth="217.0" promptText="Hourly rate" />
-      <DatePicker fx:id="memberSinceDatePicker" layoutX="152.0" layoutY="413.0" prefHeight="38.0" prefWidth="217.0" promptText="mm/dd/yyyy" />
-      <Button layoutX="194.0" layoutY="475.0" mnemonicParsing="false" onAction="#saveButten" text="Save" />
-      <Button layoutX="272.0" layoutY="475.0" mnemonicParsing="false" onAction="#cancleButton" text="Cancel" />
+      <Label fx:id="nameLable" layoutX="50.0" layoutY="61.0" prefHeight="17.0" prefWidth="52.0" text="Name:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="emailLable" layoutX="372.0" layoutY="61.0" prefHeight="17.0" prefWidth="52.0" text="Email:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="countryLable" layoutX="50.0" layoutY="160.0" prefHeight="20.0" prefWidth="65.0" text="Country:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="skillsLable" layoutX="372.0" layoutY="160.0" prefHeight="17.0" prefWidth="52.0" text="Skills:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="statusLable" layoutX="47.0" layoutY="265.0" prefHeight="17.0" prefWidth="52.0" text="Status:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="rateLable" layoutX="375.0" layoutY="275.0" prefHeight="17.0" prefWidth="46.0" text="Rate:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="dateLable" layoutX="50.0" layoutY="376.0" prefHeight="17.0" prefWidth="87.0" text="Date:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="nameTextField" layoutX="50.0" layoutY="93.0" prefHeight="45.0" prefWidth="217.0" promptText="Enter name" />
+      <TextField fx:id="emailTextField" layoutX="372.0" layoutY="93.0" prefHeight="51.0" prefWidth="217.0" promptText="Enter email" />
+      <ComboBox fx:id="countryComboBox" layoutX="50.0" layoutY="190.0" prefHeight="51.0" prefWidth="217.0" promptText="Select country" />
+      <TextArea fx:id="skillsTextArea" layoutX="369.0" layoutY="190.0" prefHeight="75.0" prefWidth="224.0" promptText="List skills" />
+      <ComboBox fx:id="statusComboBox" layoutX="50.0" layoutY="296.0" prefHeight="59.0" prefWidth="217.0" promptText="Select status" />
+      <TextField fx:id="rateTextField" layoutX="369.0" layoutY="304.0" prefHeight="59.0" prefWidth="217.0" promptText="Hourly rate" />
+      <DatePicker fx:id="memberSinceDatePicker" layoutX="50.0" layoutY="406.0" prefHeight="68.0" prefWidth="217.0" promptText="mm/dd/yyyy" />
+      <Button layoutX="341.0" layoutY="436.0" mnemonicParsing="false" onAction="#saveButten" prefHeight="39.0" prefWidth="80.0" text="Save">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Button layoutX="464.0" layoutY="436.0" mnemonicParsing="false" onAction="#cancleButton" text="Cancel">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Button layoutX="492.0" layoutY="488.0" mnemonicParsing="false" onAction="#backButton" prefHeight="39.0" prefWidth="87.0" text="Back">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

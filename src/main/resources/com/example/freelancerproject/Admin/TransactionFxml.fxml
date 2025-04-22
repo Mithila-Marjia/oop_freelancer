@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancerproject.Admin.TransactionFxml">
+<AnchorPane prefHeight="392.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancerproject.Admin.TransactionFxml">
    <children>
-      <Label fx:id="monitorLabel" layoutX="203.0" layoutY="25.0" prefHeight="35.0" prefWidth="269.0" text="Monitor Transactions">
+      <Label fx:id="monitorLabel" layoutX="203.0" layoutY="5.0" prefHeight="55.0" prefWidth="269.0" text="Monitor Transactions">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <TableView fx:id="transactionTableView" layoutY="108.0" prefHeight="292.0" prefWidth="600.0">
+      <TableView fx:id="transactionTableView" layoutY="77.0" prefHeight="235.0" prefWidth="600.0">
         <columns>
-          <TableColumn fx:id="dataTableView" prefWidth="144.0" text="Date" />
-          <TableColumn fx:id="typeTableView" prefWidth="137.0" text="Type" />
-            <TableColumn fx:id="userTableView" prefWidth="142.0" text="User" />
-            <TableColumn fx:id="amountTableView" prefWidth="176.0" text="Amount" />
+          <TableColumn fx:id="transactionidTablecolumn" prefWidth="144.0" text="Transaction Id" />
+          <TableColumn fx:id="senderidTablecolumn" prefWidth="96.0" text="Sender Id" />
+            <TableColumn fx:id="receiverTablecolumn" prefWidth="126.0" text="Receiver Id" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="119.0" text="Status" />
+            <TableColumn fx:id="dateTableColumn" prefWidth="114.0" text="Date" />
         </columns>
       </TableView>
+      <Button layoutX="504.0" layoutY="332.0" mnemonicParsing="false" onAction="#backButton" prefHeight="45.0" prefWidth="77.0" text="Back">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

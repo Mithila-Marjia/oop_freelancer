@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="488.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancerproject.CustomerSupport.InquiriesFxml">
+   <children>
+      <Label fx:id="inquirieslLable" layoutX="233.0" layoutY="-2.0" prefHeight="67.0" prefWidth="201.0" text="General Inquiries">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="generalTableView" layoutX="-1.0" layoutY="74.0" prefHeight="415.0" prefWidth="301.0">
+        <columns>
+          <TableColumn fx:id="inquiryidTableColumn" prefWidth="118.0" text="Inquiry ID" />
+          <TableColumn fx:id="subjectTableColumn" prefWidth="182.0" text="Subject" />
+        </columns>
+      </TableView>
+      <Label fx:id="descriptionLabel" layoutX="300.0" layoutY="260.0" prefHeight="28.0" prefWidth="109.0" text="Description:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Button layoutX="478.0" layoutY="340.0" mnemonicParsing="false" onAction="#sendButton" prefHeight="39.0" prefWidth="146.0" text="Send">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Label fx:id="subjectLabel" layoutX="328.0" layoutY="162.0" prefHeight="27.0" prefWidth="76.0" text="Subject:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="553.0" layoutY="431.0" mnemonicParsing="false" onAction="#backButton" prefHeight="39.0" prefWidth="128.0" text="Back">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="descriptionTextArea" layoutX="411.0" layoutY="236.0" prefHeight="95.0" prefWidth="276.0" promptText="write hare">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextArea>
+      <TextField fx:id="subjectTextField" layoutX="411.0" layoutY="164.0" prefHeight="46.0" prefWidth="276.0" promptText="subject">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="idTextField" layoutX="411.0" layoutY="87.0" prefHeight="46.0" prefWidth="276.0" promptText="id">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="idLabel" layoutX="341.0" layoutY="102.0" text="ID:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
