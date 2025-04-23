@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopf.SalesTrackingController">
+    <children>
+        <!-- Title Label -->
+        <Label layoutX="180.0" layoutY="20.0" text="Sales Tracking Dashboard" textFill="DARKBLUE">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+
+        <!-- Sales Information Section -->
+        <Label layoutX="30.0" layoutY="80.0" text="Product Name:" />
+        <TextField layoutX="150.0" layoutY="80.0" prefWidth="200.0" fx:id="productNameTextField"/>
+
+        <Label layoutX="30.0" layoutY="120.0" text="Quantity Sold:" />
+        <TextField layoutX="150.0" layoutY="120.0" prefWidth="200.0" fx:id="quantitySoldTextField"/>
+
+        <Label layoutX="30.0" layoutY="160.0" text="Sale Price:" />
+        <TextField layoutX="150.0" layoutY="160.0" prefWidth="200.0" fx:id="salePriceTextField"/>
+
+        <Label layoutX="30.0" layoutY="200.0" text="Date of Sale:" />
+        <TextField layoutX="150.0" layoutY="200.0" prefWidth="200.0" fx:id="saleDateTextField"/>
+
+        <!-- Add Sale Button -->
+        <Button layoutX="150.0" layoutY="240.0" text="Add Sale" onAction="#addSaleAction" prefWidth="200.0" textFill="DARKGREEN"/>
+
+        <!-- Table to Display Sales Data -->
+        <TableView layoutX="30.0" layoutY="300.0" prefHeight="150.0" prefWidth="540.0" fx:id="salesTable">
+            <columns>
+                <TableColumn fx:id="productColumn" text="Product Name" prefWidth="150.0"/>
+                <TableColumn fx:id="quantityColumn" text="Quantity Sold" prefWidth="150.0"/>
+                <TableColumn fx:id="priceColumn" text="Sale Price" prefWidth="150.0"/>
+                <TableColumn fx:id="dateColumn" text="Date of Sale" prefWidth="150.0"/>
+            </columns>
+        </TableView>
+
+        <!-- Generate Report Button -->
+        <Button layoutX="150.0" layoutY="470.0" text="Generate Report" onAction="#generateReportAction" prefWidth="200.0" textFill="DARKBLUE"/>
+
+        <!-- Logout Button -->
+        <Button layoutX="450.0" layoutY="470.0" text="Logout" onAction="#logoutOnAction" textFill="#0e1dbf">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

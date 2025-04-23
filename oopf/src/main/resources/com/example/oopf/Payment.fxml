@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paymentPane" prefHeight="370.0" prefWidth="420.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.oopf.PaymentController">
+
+    <children>
+        <Label layoutX="30.0" layoutY="25.0" text="Payment Received" textFill="#137c2c">
+            <font>
+                <Font name="System Bold Italic" size="18.0"/>
+            </font>
+        </Label>
+
+        <Label layoutX="30.0" layoutY="70.0" text="Payer Name:">
+            <font>
+                <Font name="System Bold Italic" size="12.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="payerNameField" layoutX="130.0" layoutY="65.0" prefWidth="250.0"
+                   promptText="Enter name"/>
+
+        <Label layoutX="30.0" layoutY="115.0" text="Amount:">
+            <font>
+                <Font name="System Bold Italic" size="12.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="amountField" layoutX="130.0" layoutY="110.0" prefWidth="250.0"
+                   promptText="Enter amount"/>
+
+        <Label layoutX="30.0" layoutY="160.0" text="Payment Method:">
+            <font>
+                <Font name="System Bold Italic" size="12.0"/>
+            </font>
+        </Label>
+        <MenuButton fx:id="methodMenu" layoutX="130.0" layoutY="155.0" prefWidth="250.0" text="Select Method">
+            <items>
+                <MenuItem fx:id="cashItem" text="Cash"/>
+                <MenuItem fx:id="bankItem" text="Bank Transfer"/>
+                <MenuItem fx:id="mobileItem" text="Mobile Payment"/>
+            </items>
+        </MenuButton>
+
+        <Label layoutX="30.0" layoutY="205.0" text="Date:">
+            <font>
+                <Font name="System Bold Italic" size="12.0"/>
+            </font>
+        </Label>
+        <DatePicker fx:id="paymentDatePicker" layoutX="130.0" layoutY="200.0" prefWidth="250.0"/>
+
+        <Button layoutX="160.0" layoutY="260.0" text="Confirm Payment" textFill="#137c2c"
+                onAction="#confirmPaymentAction"/>
+
+        <Label fx:id="confirmationLabel" layoutX="80.0" layoutY="310.0" prefWidth="280.0"
+               textFill="#1d8d3d"/>
+    </children>
+</AnchorPane>

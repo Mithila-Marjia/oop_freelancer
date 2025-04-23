@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="milestonePane" prefHeight="400.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopf.CreateMilestoneController">
+    <children>
+        <Label layoutX="32.0" layoutY="20.0" text="Create Project Milestone" textFill="#dc1616">
+            <font>
+                <Font name="System Bold Italic" size="18.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="32.0" layoutY="65.0" text="Milestone Title:">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="titleField" layoutX="150.0" layoutY="61.0" prefHeight="26.0" prefWidth="220.0" promptText="e.g., UI Design Complete" />
+
+        <Label layoutX="32.0" layoutY="105.0" text="Description:">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="descArea" layoutX="150.0" layoutY="101.0" prefHeight="60.0" prefWidth="220.0" promptText="Brief about the milestone" wrapText="true"/>
+
+        <Label layoutX="32.0" layoutY="180.0" text="Due Date:">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <DatePicker fx:id="dueDatePicker" layoutX="150.0" layoutY="176.0" prefWidth="220.0"/>
+
+        <Label layoutX="32.0" layoutY="220.0" text="Priority:">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <MenuButton fx:id="priorityMenu" layoutX="150.0" layoutY="216.0" text="Select Priority">
+            <items>
+                <MenuItem text="High" onAction="#setHighPriority"/>
+                <MenuItem text="Medium" onAction="#setMediumPriority"/>
+                <MenuItem text="Low" onAction="#setLowPriority"/>
+            </items>
+        </MenuButton>
+
+        <Button layoutX="160.0" layoutY="270.0" mnemonicParsing="false" onAction="#addMilestoneAction" text="Add Milestone" textFill="#ec0000" />
+
+        <Label fx:id="statusLabel" layoutX="90.0" layoutY="320.0" prefHeight="18.0" prefWidth="240.0" textFill="green" />
+    </children>
+</AnchorPane>
