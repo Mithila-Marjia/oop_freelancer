@@ -1,5 +1,7 @@
 package com.example.freelancerproject.CustomerSupport;
 
+import com.example.freelancerproject.Admin.ChangeFreelancer;
+import com.example.freelancerproject.Admin.Report;
 import com.example.freelancerproject.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +14,12 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class OrderCancellationsFxml
 {
@@ -33,22 +40,39 @@ public class OrderCancellationsFxml
     @javafx.fxml.FXML
     private TextField receveridTextField;
     @javafx.fxml.FXML
-    private ComboBox reasonComboBox;
+    private ComboBox<String>reasonComboBox;
     @javafx.fxml.FXML
     private Label orderidLable;
     @javafx.fxml.FXML
     private Label receveridLable;
 
+    ArrayList<OrderCancellation> orderCancellationss = new ArrayList<>();
+
     @javafx.fxml.FXML
     public void initialize() {
+        reasonComboBox.getItems().addAll("Technical Issue","False Information","Change of mind");
     }
 
     @javafx.fxml.FXML
     public void cancelButton(ActionEvent actionEvent) {
+
+
     }
 
     @javafx.fxml.FXML
     public void issueButton(ActionEvent actionEvent) {
+        String reason = reasonComboBox.getValue();
+        int receverid =Integer.parseInt(receveridTextField.getText());
+        int senderid =Integer.parseInt(senderidTextfield.getText());
+        int id =Integer.parseInt(idTextField.getText());
+
+
+        String comments = commentsTextArea.getText();
+
+        OrderCancellation orderCancellations = new OrderCancellation(id, senderid,receverid);
+        orderCancellationss.add(orderCancellations);
+
+        writeOrderCancellation(orderCancellations);
     }
 
     @javafx.fxml.FXML
@@ -62,5 +86,34 @@ public class OrderCancellationsFxml
         stage.setScene(scene);
         stage.setTitle("CustomerSupport DashBoard");
         stage.show();
+    }
+    public void writeOrderCancellation(OrderCancellation orderCancellation) {
+        File f = null;
+        FileOutputStream fos = null;
+        ObjectOutputStream oos = null;
+
+        try {
+            f = new File("OrderCancellation.bin");
+            if(f.exists()){
+                fos = new FileOutputStream(f,true);
+//                oos = new AppendableObjectOutputStream(fos);
+                oos = new ObjectOutputStream(fos) ;
+            }
+            else{
+                fos = new FileOutputStream(f);
+                oos = new ObjectOutputStream(fos);
+            }
+
+            oos.writeObject(orderCancellation);
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        } finally {
+            try {
+                if(oos != null) oos.close();
+            } catch (IOException ex) {
+                System.out.println("Error: " + ex.getMessage());
+            }
+        }
     }
 }

@@ -1,17 +1,17 @@
 package com.example.freelancerproject.CustomerSupport;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Paymentissue {
+public class Paymentissue  implements Serializable {
     int paymentid,senderid;
     String issuedetail;
     LocalDate date;
 
-    public Paymentissue(int paymentid, int senderid, String issuedetail, LocalDate date) {
+    public Paymentissue(int paymentid, int senderid, String issuedetail) {
         this.paymentid = paymentid;
         this.senderid = senderid;
         this.issuedetail = issuedetail;
-        this.date = date;
     }
 
     public int getPaymentid() {

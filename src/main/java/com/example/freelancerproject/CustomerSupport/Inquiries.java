@@ -1,6 +1,8 @@
 package com.example.freelancerproject.CustomerSupport;
 
-public class Inquiries {
+import java.io.Serializable;
+
+public class Inquiries  implements Serializable {
 
     int inquiriesid;
     String subject,description;

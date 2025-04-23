@@ -1,6 +1,8 @@
 package com.example.freelancerproject.CustomerSupport;
 
-public class Identity {
+import java.io.Serializable;
+
+public class Identity implements Serializable {
 
     int freelancerid;
     String name,pricing,details;

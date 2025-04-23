@@ -1,19 +1,18 @@
 package com.example.freelancerproject.Admin;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Policy {
+public class Policy  implements Serializable {
 
     int policyid;
     String tital,description;
     LocalDate date;
 
 
-    public Policy(int policyid, String tital, String description, LocalDate date) {
-        this.policyid = policyid;
+    public Policy(String tital, String description) {
         this.tital = tital;
         this.description = description;
-        this.date = date;
     }
 
     public int getPolicyid() {

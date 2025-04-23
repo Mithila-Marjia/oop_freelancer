@@ -1,16 +1,16 @@
 package com.example.freelancerproject.Admin;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Announcement {
+public class Announcement implements Serializable {
 
     String tital,body,formete,whocansee;
     LocalDate date;
 
-    public Announcement(String tital, String body, String formete, String whocansee, LocalDate date) {
+    public Announcement(String tital, String body, String whocansee, LocalDate date) {
         this.tital = tital;
         this.body = body;
-        this.formete = formete;
         this.whocansee = whocansee;
         this.date = date;
     }

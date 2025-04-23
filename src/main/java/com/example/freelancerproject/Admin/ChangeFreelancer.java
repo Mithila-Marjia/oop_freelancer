@@ -1,8 +1,9 @@
 package com.example.freelancerproject.Admin;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class ChangeFreelancer {
+public class ChangeFreelancer  implements Serializable {
 
     String name,email,country,skills,status,rate;
     LocalDate date;

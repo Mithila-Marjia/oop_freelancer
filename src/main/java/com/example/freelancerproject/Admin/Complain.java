@@ -1,6 +1,8 @@
 package com.example.freelancerproject.Admin;
 
-public class Complain {
+import java.io.Serializable;
+
+public class Complain implements Serializable {
 
     int complainid,senderid;
     String description;

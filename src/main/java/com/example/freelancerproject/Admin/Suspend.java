@@ -1,6 +1,8 @@
 package com.example.freelancerproject.Admin;
 
-public class Suspend {
+import java.io.Serializable;
+
+public class Suspend  implements Serializable   {
     int suspendid,suspendedid;
     String reason;
 
