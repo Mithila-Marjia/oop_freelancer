@@ -1,6 +1,8 @@
 package com.example.freelancerproject.CustomerSupport;
 
-public class Monitor {
+import java.io.Serializable;
+
+public class Monitor implements Serializable {
 
     int contentid;
     String name,status;

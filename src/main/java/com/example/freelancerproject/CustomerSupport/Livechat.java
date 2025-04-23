@@ -1,6 +1,8 @@
 package com.example.freelancerproject.CustomerSupport;
 
-public class Livechat {
+import java.io.Serializable;
+
+public class Livechat  implements Serializable {
     int messageid,senderid;
     String message,reply;
 

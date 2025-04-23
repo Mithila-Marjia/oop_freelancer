@@ -1,8 +1,9 @@
 package com.example.freelancerproject.CustomerSupport;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Usercomplain {
+public class Usercomplain  implements Serializable {
     int userid;
     String subject,description,status;
     LocalDate Date;

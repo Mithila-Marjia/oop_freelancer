@@ -92,7 +92,7 @@ public class DashBoardFxmlController
         stage.show();
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void userBurron(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CustomerSupport/usercomplaintFxml.fxml"));
@@ -113,6 +113,22 @@ public class DashBoardFxmlController
         Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.setTitle("livechat");
+        stage.show();
+    }
+
+    @javafx.fxml.FXML
+    public void userButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void signoutButton(ActionEvent actionEvent) throws IOException {
+        Parent root = null ;
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CustomerSupport/ReportFxml.fxml"));
+        root = fxmlLoader.load();
+        Scene scene = new Scene(root) ;
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Login");
         stage.show();
     }
 }

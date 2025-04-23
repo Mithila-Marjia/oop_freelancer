@@ -1,16 +1,17 @@
 package com.example.freelancerproject.CustomerSupport;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class OrderCancellation {
+public class OrderCancellation  implements Serializable {
     int orderid,senderid,receiverid;
     LocalDate date;
 
-    public OrderCancellation(int orderid, int senderid, int receiverid, LocalDate date) {
+    public OrderCancellation(int orderid, int senderid, int receiverid) {
         this.orderid = orderid;
         this.senderid = senderid;
         this.receiverid = receiverid;
-        this.date = date;
+
     }
 
     public int getOrderid() {

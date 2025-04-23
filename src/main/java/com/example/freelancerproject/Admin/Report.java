@@ -1,15 +1,17 @@
 package com.example.freelancerproject.Admin;
 
-public class Report {
+import java.io.Serializable;
+
+public class Report  implements Serializable {
 
     int reportid;
-    String subject,description;
+    String description;
 
-    public Report(int reportid, String subject, String description) {
+    public Report(int reportid, String description) {
         this.reportid = reportid;
-        this.subject = subject;
         this.description = description;
     }
+
 
     public int getReportid() {
         return reportid;
@@ -19,13 +21,6 @@ public class Report {
         this.reportid = reportid;
     }
 
-    public String getSubject() {
-        return subject;
-    }
-
-    public void setSubject(String subject) {
-        this.subject = subject;
-    }
 
     public String getDescription() {
         return description;
@@ -39,7 +34,6 @@ public class Report {
     public String toString() {
         return "Report{" +
                 "reportid=" + reportid +
-                ", subject='" + subject + '\'' +
                 ", description='" + description + '\'' +
                 '}';
     }

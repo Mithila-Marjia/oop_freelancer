@@ -11,7 +11,11 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
 public class SuspendFxml
 {
@@ -30,12 +34,22 @@ public class SuspendFxml
     @javafx.fxml.FXML
     private TextArea reasonTextArea;
 
+    ArrayList<Suspend> suspends = new ArrayList<>();
+
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
     public void suspendButton(ActionEvent actionEvent) {
+
+        int suspendid =Integer.parseInt(suspendidTextField.getText());
+        int suspendedid =Integer.parseInt(suspendedidTextFiels.getText());
+        String reason = reasonTextArea.getText();
+        Suspend suspend = new Suspend(suspendid,suspendedid,reason);
+        suspends.add(suspend);
+//        writeFreelancer(suspend);
+
     }
 
     @javafx.fxml.FXML
@@ -48,5 +62,34 @@ public class SuspendFxml
         stage.setScene(scene);
         stage.setTitle("Admin DashBoard");
         stage.show();
+    }
+    public void writeFreelancer(ChangeFreelancer changeFreelancer) {
+        File f = null;
+        FileOutputStream fos = null;
+        ObjectOutputStream oos = null;
+
+        try {
+            f = new File("FreelancerData.bin");
+            if(f.exists()){
+                fos = new FileOutputStream(f,true);
+//                oos = new AppendableObjectOutputStream(fos);
+                oos = new ObjectOutputStream(fos) ;
+            }
+            else{
+                fos = new FileOutputStream(f);
+                oos = new ObjectOutputStream(fos);
+            }
+
+            oos.writeObject(changeFreelancer);
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        } finally {
+            try {
+                if(oos != null) oos.close();
+            } catch (IOException ex) {
+                System.out.println("Error: " + ex.getMessage());
+            }
+        }
     }
 }

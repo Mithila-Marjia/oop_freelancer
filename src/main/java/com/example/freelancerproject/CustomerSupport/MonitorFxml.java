@@ -10,29 +10,40 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class MonitorFxml
 {
     @javafx.fxml.FXML
     private Label contenIDtLable;
     @javafx.fxml.FXML
-    private TableColumn statusTableColumn;
+    private TableColumn<Monitor,String>statusTableColumn;
     @javafx.fxml.FXML
-    private TableView monitorcontentTableView;
+    private TableView <Monitor>monitorcontentTableView;
     @javafx.fxml.FXML
-    private TableColumn contentnameTableColumn;
+    private TableColumn<Monitor,String>contentnameTableColumn;
     @javafx.fxml.FXML
-    private ComboBox contentidcombobox;
+    private ComboBox<Integer> contentidcombobox;
     @javafx.fxml.FXML
-    private TableColumn contentidTableColumn;
+    private TableColumn <Monitor,Integer>contentidTableColumn;
     @javafx.fxml.FXML
     private Label contentLable;
+    ArrayList<Monitor> monitors = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
+        contentidcombobox.getItems().addAll();
+
+        contentidTableColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+        contentnameTableColumn.setCellValueFactory(new PropertyValueFactory<Monitor,String>("name"));
+        statusTableColumn.setCellValueFactory(new PropertyValueFactory<Monitor,String>("status"));
+
+
+
     }
 
     @javafx.fxml.FXML
@@ -49,6 +60,7 @@ public class MonitorFxml
 
     @javafx.fxml.FXML
     public void ignoreButton(ActionEvent actionEvent) {
+
     }
 
     @javafx.fxml.FXML
