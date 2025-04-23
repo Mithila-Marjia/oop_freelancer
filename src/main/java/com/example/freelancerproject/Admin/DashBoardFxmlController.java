@@ -24,7 +24,7 @@ public class DashBoardFxmlController
     public void announcementButton(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Admin/AnnouncementFxml.fxml"));
-        root = fxmlLoader.load();
+
         Scene scene = new Scene(root) ;
         Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
@@ -37,7 +37,7 @@ public class DashBoardFxmlController
     public void reportButton(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Admin/ReportFxml.fxml"));
-        root = fxmlLoader.load();
+
         Scene scene = new Scene(root) ;
         Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
@@ -63,7 +63,7 @@ public class DashBoardFxmlController
     public void applicationButton(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Admin/ApplicationFxml.fxml"));
-        root = fxmlLoader.load();
+
         Scene scene = new Scene(root) ;
         Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
@@ -76,7 +76,7 @@ public class DashBoardFxmlController
     public void policyButton(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Admin/PolicyFxml.fxml"));
-        root = fxmlLoader.load();
+
         Scene scene = new Scene(root) ;
         Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
@@ -103,7 +103,7 @@ public class DashBoardFxmlController
     public void complainButton(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Admin/ComplainFxml.fxml"));
-        root = fxmlLoader.load();
+
         Scene scene = new Scene(root) ;
         Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
@@ -147,7 +147,7 @@ public class DashBoardFxmlController
 
         Parent root = null ;
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Admin/ReportFxml.fxml"));
-        root = fxmlLoader.load();
+
         Scene scene = new Scene(root) ;
         Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.TextArea?>
+<AnchorPane prefHeight="604.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancerproject.freelancerfinal.HrLearningDevelopmentController">
+   <children>
+      <Label layoutX="131.0" layoutY="1.0" prefHeight="37.0" prefWidth="373.0" text="HR MANAGER" textFill="#0c13ef" textOverrun="CLIP">
+         <font>
+            <Font size="57.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="62.0" prefHeight="72.0" prefWidth="385.0" text="LEARNING AND DEVELOPMENT" textFill="#6d7707">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="121.0" mnemonicParsing="false" onAction="#pythononclick" prefHeight="25.0" prefWidth="263.0" text="Learning Python" textFill="#e01111" />
+      <Button layoutX="300.0" layoutY="121.0" mnemonicParsing="false" onAction="#htmlonclick" prefHeight="25.0" prefWidth="263.0" text="Learning Html" />
+      <Button layoutX="14.0" layoutY="160.0" mnemonicParsing="false" onAction="#phponclick" prefHeight="25.0" prefWidth="263.0" text="Learning PHP" textFill="#ed0c0c" />
+      <Button layoutX="300.0" layoutY="160.0" mnemonicParsing="false" onAction="#homepageonclick" prefHeight="25.0" prefWidth="263.0" text="HOME PAGE" />
+      <TextArea fx:id="learningtext" layoutX="24.0" layoutY="207.0" prefHeight="386.0" prefWidth="547.0" />
+      <Button layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#backonclick" text="back" />
+   </children>
+</AnchorPane>
