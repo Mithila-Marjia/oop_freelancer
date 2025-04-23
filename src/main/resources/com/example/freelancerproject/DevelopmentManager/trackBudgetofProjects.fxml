@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="646.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancerproject.DevelopmentManager.TrackBudgetOfProjectController">
+   <children>
+      <Label layoutX="87.0" layoutY="115.0" text="Project Name">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="89.0" layoutY="165.0" text="Total Budget">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <TextField fx:id="projectNameTextField" layoutX="240.0" layoutY="111.0" prefHeight="26.0" prefWidth="313.0" />
+      <TextField fx:id="budjetTextField" layoutX="239.0" layoutY="160.0" prefHeight="26.0" prefWidth="314.0" />
+      <Label layoutX="92.0" layoutY="263.0" text="Remaining Budget">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <TextField fx:id="expensesTextField" layoutX="240.0" layoutY="213.0" prefHeight="26.0" prefWidth="314.0" />
+      <Label layoutX="90.0" layoutY="217.0" text="Expenses">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <TextField fx:id="remainingBudgetTextField" layoutX="240.0" layoutY="259.0" prefHeight="26.0" prefWidth="314.0" />
+      <TableView fx:id="budjetTableView" layoutX="103.0" layoutY="382.0" prefHeight="202.0" prefWidth="482.0">
+        <columns>
+          <TableColumn fx:id="nameTableColumn" prefWidth="128.80005264282227" text="Name" />
+          <TableColumn fx:id="budjetTableColumn" prefWidth="117.59996032714844" text="Total Budget" />
+            <TableColumn fx:id="expensesTableColumn" prefWidth="103.199951171875" text="Expenses" />
+            <TableColumn fx:id="remainingBudjetTableColumn" prefWidth="132.800048828125" text="Remaining Budget" />
+        </columns>
+      </TableView>
+      <Button layoutX="284.0" layoutY="323.0" mnemonicParsing="false" onAction="#viewBudjetButtonOnClick" prefHeight="35.0" prefWidth="159.0" text="View Budget">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Label layoutX="222.0" layoutY="44.0" prefHeight="38.0" prefWidth="331.0" text="Track Budget Dashboard" textFill="#963e3e">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

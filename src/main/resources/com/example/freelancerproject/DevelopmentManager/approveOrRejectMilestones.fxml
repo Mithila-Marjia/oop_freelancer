@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="632.0" prefWidth="829.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"fx:controller="com.example.freelancerproject.DevelopmentManager.ApproveOrRejectMilestonesController">
+   <children>
+      <TextField fx:id="projectNameTextField" layoutX="204.0" layoutY="64.0" prefHeight="38.0" prefWidth="322.0" />
+      <Label layoutX="91.0" layoutY="71.0" prefHeight="26.0" prefWidth="87.0" text="Project Name">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <TextField fx:id="budgeTextField" layoutX="204.0" layoutY="170.0" prefHeight="38.0" prefWidth="322.0" />
+      <ComboBox fx:id="milestoneComboBox" layoutX="204.0" layoutY="117.0" prefHeight="38.0" prefWidth="322.0" />
+      <Label layoutX="91.0" layoutY="130.0" prefHeight="26.0" prefWidth="72.0" text="Milestones">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="93.0" layoutY="176.0" prefHeight="26.0" prefWidth="66.0" text="Budget ">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="91.0" layoutY="233.0" prefHeight="26.0" prefWidth="72.0" text="Time Line">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <DatePicker fx:id="timeLinedatePicker" layoutX="204.0" layoutY="221.0" prefHeight="38.0" prefWidth="322.0" />
+      <Label layoutX="87.0" layoutY="290.0" prefHeight="26.0" prefWidth="104.0" text=" Market Demand">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <RadioButton fx:id="highRadioButton" layoutX="224.0" layoutY="295.0" mnemonicParsing="false" text="High" />
+      <RadioButton fx:id="lowRadioButton" layoutX="310.0" layoutY="295.0" mnemonicParsing="false" text="Low" />
+      <RadioButton fx:id="mediumRadioButton" layoutX="392.0" layoutY="295.0" mnemonicParsing="false" text="Medium" />
+      <TableView fx:id="milestoneTableview" layoutX="90.0" layoutY="391.0" prefHeight="210.0" prefWidth="675.0">
+        <columns>
+          <TableColumn fx:id="nameTableColumn" prefWidth="185.60005950927734" text="Project Name" />
+          <TableColumn fx:id="milestoneTableColumn" prefWidth="135.2000732421875" text="Milestones" />
+            <TableColumn fx:id="budgetTableColumn" prefWidth="117.60000610351562" text="Budget" />
+            <TableColumn fx:id="timeLineTableColumn" prefWidth="115.20001220703125" text="Time Line" />
+            <TableColumn fx:id="marketDemandTableColumn" prefWidth="123.20001220703125" text="Market Demand" />
+        </columns>
+      </TableView>
+      <Button layoutX="349.0" layoutY="338.0" mnemonicParsing="false" onAction="#submitMilestoneButtonOnClick" prefHeight="38.0" prefWidth="146.0" text="Submit Milestone">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button layoutX="611.0" layoutY="64.0" mnemonicParsing="false" onAction="#verifyMilestoneButtonOnClick" prefHeight="38.0" prefWidth="131.0" text="Verify Milestone">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Label fx:id="viewVerifyMilestoneLabel" layoutX="575.0" layoutY="130.0" prefHeight="179.0" prefWidth="191.0" style="-fx-background-color: tan;" />
+      <Label layoutX="262.0" layoutY="14.0" prefHeight="38.0" prefWidth="331.0" text="View Freelancer Profiles Dashboard" textFill="#963e3e">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
