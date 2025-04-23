@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="479.0" prefWidth="652.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancerproject.Client.AssignedFreelancerController">
+   <children>
+      <Label layoutX="82.0" layoutY="156.0" prefHeight="36.0" prefWidth="118.0" text="Freelancer  Name">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="82.0" layoutY="90.0" prefHeight="36.0" prefWidth="93.0" text="Project">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <TextField fx:id="projectTextField" layoutX="220.0" layoutY="90.0" prefHeight="36.0" prefWidth="350.0" />
+      <TextField fx:id="selectFreelancerTextField" layoutX="220.0" layoutY="156.0" prefHeight="36.0" prefWidth="350.0" />
+      <Button layoutX="452.0" layoutY="216.0" mnemonicParsing="false" onAction="#sendMessageButtonOnClick" prefHeight="46.0" prefWidth="117.0" style="-fx-background-color: silver;" text="Send Message">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <TextArea fx:id="typeMessagetextArea" layoutX="203.0" layoutY="275.0" prefHeight="171.0" prefWidth="371.0" promptText="Type Message here..." />
+      <Label layoutX="199.0" layoutY="14.0" prefHeight="50.0" prefWidth="326.0" text="Assigned Freelancer Dashboard" textFill="#963e3e">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

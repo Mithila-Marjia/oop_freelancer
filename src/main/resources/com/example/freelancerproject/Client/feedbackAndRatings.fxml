@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="612.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancerproject.Client.FeedbackAndRatingsController">
+   <children>
+      <Button layoutX="340.0" layoutY="347.0" mnemonicParsing="false" onAction="#submitFeedbackButtonOnClick" prefHeight="38.0" prefWidth="134.0" text="Submit Feedback">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <ComboBox fx:id="ratingComboBox" layoutX="243.0" layoutY="188.0" prefHeight="32.0" prefWidth="346.0" />
+      <TextField fx:id="projectNameTextField" layoutX="244.0" layoutY="77.0" prefHeight="32.0" prefWidth="345.0" />
+      <Label layoutX="94.0" layoutY="80.0" prefHeight="25.0" prefWidth="66.0" text="Project">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="91.0" layoutY="134.0" prefHeight="26.0" prefWidth="56.0" text="Name">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="91.0" layoutY="191.0" prefHeight="26.0" prefWidth="47.0" text="Rating">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <TextArea fx:id="commentTextArea" layoutX="244.0" layoutY="249.0" prefHeight="66.0" prefWidth="346.0" />
+      <Label layoutX="91.0" layoutY="269.0" prefHeight="26.0" prefWidth="74.0" text="Comments">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label fx:id="viewFeedbackMessageLabel" layoutX="209.0" layoutY="404.0" prefHeight="133.0" prefWidth="380.0" style="-fx-background-color: tan;" />
+      <Label layoutX="217.0" layoutY="21.0" prefHeight="38.0" prefWidth="380.0" text="Feedback and Rating Dashboard" textFill="#963e3e">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fNameTextField" layoutX="244.0" layoutY="131.0" prefHeight="32.0" prefWidth="345.0" />
+   </children>
+</AnchorPane>

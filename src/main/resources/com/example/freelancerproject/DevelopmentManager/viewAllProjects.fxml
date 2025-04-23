@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="582.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancerproject.DevelopmentManager.ViewAllProjectController">
+   <children>
+      <Label layoutX="58.0" layoutY="202.0" prefHeight="35.0" prefWidth="121.0" text="Assigned Freelancer" />
+      <Label layoutX="109.0" layoutY="228.0" />
+      <Label layoutX="88.0" layoutY="82.0" text="Project Title" />
+      <Label layoutX="83.0" layoutY="131.0" text="Project Status" />
+      <Label layoutX="90.0" layoutY="174.0" text="View Cient" />
+      <TextField layoutX="216.0" layoutY="215.0" />
+      <TextField layoutX="216.0" layoutY="87.0" />
+      <TextField layoutX="216.0" layoutY="127.0" />
+      <TextField layoutX="216.0" layoutY="170.0" />
+      <TableView layoutX="70.0" layoutY="357.0" prefHeight="200.0" prefWidth="409.0">
+        <columns>
+          <TableColumn prefWidth="123.19997787475586" text="Title" />
+          <TableColumn prefWidth="78.4000244140625" text="Status" />
+            <TableColumn prefWidth="79.19996643066406" text="Client" />
+            <TableColumn prefWidth="129.60003662109375" text="Assigned Freelancer" />
+        </columns>
+      </TableView>
+      <Button layoutX="235.0" layoutY="291.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="171.0" text="View All Projects" />
+   </children>
+</AnchorPane>

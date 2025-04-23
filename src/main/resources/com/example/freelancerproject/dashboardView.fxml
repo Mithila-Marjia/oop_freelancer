@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="417.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freelancerproject.DashboardViewController">
+   <children>
+      <Label layoutX="52.0" layoutY="38.0" prefHeight="49.0" prefWidth="547.0" text="Welcome to Freelancing Company Dashboard" textFill="#ea0303">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="72.0" layoutY="123.0" mnemonicParsing="false" onAction="#adminButtonOnClick" prefHeight="26.0" prefWidth="164.0" text="Admin" textFill="#0b12dc">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="72.0" layoutY="196.0" mnemonicParsing="false" onAction="#freelancerButtonOnClick" prefHeight="26.0" prefWidth="164.0" text="Freelancer" textFill="#9e7816">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="72.0" layoutY="260.0" mnemonicParsing="false" onAction="#clientButtonOnClick" prefHeight="26.0" prefWidth="164.0" text="Client" textFill="#692727">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="72.0" layoutY="334.0" mnemonicParsing="false" onAction="#hrButtonOnClick" prefHeight="26.0" prefWidth="164.0" text="HR">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="376.0" layoutY="123.0" mnemonicParsing="false" onAction="#customerSupportButtonOnClick" prefHeight="30.0" prefWidth="173.0" text="Customer Support" textFill="#1509f2">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="376.0" layoutY="196.0" mnemonicParsing="false" onAction="#salesManagerButtonOnClick" prefHeight="26.0" prefWidth="174.0" text="Sales Manager" textFill="#a17c40">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="376.0" layoutY="260.0" mnemonicParsing="false" onAction="#developmentManagerButtonOnClick" prefHeight="26.0" prefWidth="174.0" text="Development Manager" textFill="#733b3b">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="376.0" layoutY="334.0" mnemonicParsing="false" onAction="#marketingManagerButtonOnClick" prefHeight="26.0" prefWidth="174.0" text="Marketing Manager" textFill="#363131">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
