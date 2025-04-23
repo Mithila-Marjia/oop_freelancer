@@ -143,7 +143,7 @@ public class DashBoardFxmlController
     }
 
     @javafx.fxml.FXML
-    public void signoutButton(ActionEvent actionEvent) {
+    public void signoutButton(ActionEvent actionEvent) throws IOException {
 
         Parent root = null ;
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Admin/ReportFxml.fxml"));
