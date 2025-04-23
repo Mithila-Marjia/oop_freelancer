@@ -33,6 +33,8 @@ public class MonitorFxml
     @javafx.fxml.FXML
     private Label contentLable;
     ArrayList<Monitor> monitors = new ArrayList<>();
+    @javafx.fxml.FXML
+    private TableColumn<Identity, Integer> applicationidTableColumn;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -43,7 +45,20 @@ public class MonitorFxml
         statusTableColumn.setCellValueFactory(new PropertyValueFactory<Monitor,String>("status"));
 
 
+        monitors.add (new Monitor(1, "Project Plan", "Approved"));
+        monitors.add (new Monitor(2, "Client Contract", "Pending Review"));
+        monitors.add (new Monitor(3, "Design Mockup", "Rejected"));
+        monitors.add (new Monitor(4, "Demo Video", "Under Review"));
+        monitors.add (new Monitor(5, "Final Report", "Published"));
 
+        contentidcombobox.getItems().add(1);
+        contentidcombobox.getItems().add(2);
+        contentidcombobox.getItems().add(3);
+        contentidcombobox.getItems().add(4);
+        contentidcombobox.getItems().add(4);
+
+        monitorcontentTableView.getItems().clear();
+        monitorcontentTableView.getItems().addAll(monitors) ;
     }
 
     @javafx.fxml.FXML
@@ -64,8 +79,10 @@ public class MonitorFxml
     }
 
     @javafx.fxml.FXML
-    public void saveButton(ActionEvent actionEvent) {
+    public void saveButton(ActionEvent actionEvent){
 
 
-    }
+}
+
+
 }

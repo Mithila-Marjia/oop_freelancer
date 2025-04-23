@@ -1,5 +1,6 @@
 package com.example.freelancerproject.CustomerSupport;
 
+import com.example.freelancerproject.Admin.Application;
 import com.example.freelancerproject.Admin.Report;
 import com.example.freelancerproject.HelloApplication;
 import javafx.event.ActionEvent;
@@ -35,6 +36,10 @@ public class IdentityFxml
     @javafx.fxml.FXML
     private TextArea identitydocumenttTextArea;
 
+    @javafx.fxml.FXML
+    private TableColumn<Identity, Integer> applicationidTableColumn;
+
+
     ArrayList<Identity> identities = new ArrayList<>();
 
     @javafx.fxml.FXML
@@ -47,6 +52,23 @@ public class IdentityFxml
         freelanceridTablaColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         nameTableColumn.setCellValueFactory(new PropertyValueFactory<Identity,String>("name"));
         pricingTableColumn.setCellValueFactory(new PropertyValueFactory<Identity,String>("pricing"));
+
+
+        identities.add (new Identity(1, "Alice Smith", "$20/hr", "Frontend Developer with React"));
+        identities.add(new Identity(2, "Bob Johnson", "$25/hr", "Backend Developer with Node.js"));
+        identities.add(new Identity(3, "Clara Davis", "$30/hr", "UI/UX Designer"));
+        identities.add(new Identity(4, "David Wilson", "$18/hr", "Content Writer and SEO expert"));
+        identities.add(new Identity(5, "Eva Brown", "$35/hr", "Full Stack Developer (Java & Angular)"));
+
+        freelanceridcombobox.getItems().add(1);
+        freelanceridcombobox.getItems().add(2);
+        freelanceridcombobox.getItems().add(3);
+        freelanceridcombobox.getItems().add(4);
+        freelanceridcombobox.getItems().add(4);
+
+        identityTableView.getItems().clear();
+        identityTableView.getItems().addAll(identities) ;
+
 
     }
 
