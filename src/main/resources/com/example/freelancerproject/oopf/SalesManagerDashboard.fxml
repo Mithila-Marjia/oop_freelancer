@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="438.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopf.SalesManagerDashboardController">
+    <children>
+        <Label layoutX="76.0" layoutY="71.0" text="Sales Manager Dashboard" textFill="RED">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Button layoutX="31.0" layoutY="236.0" mnemonicParsing="false" onAction="#LTColabOnAction" prefHeight="26.0" prefWidth="175.0" text=" long-term collaborations" textFill="RED" />
+        <Button layoutX="223.0" layoutY="143.0" mnemonicParsing="false" onAction="#AgreOnAction" prefHeight="26.0" prefWidth="175.0" text="Agreement" textFill="#fc0000" />
+        <Button layoutX="31.0" layoutY="187.0" mnemonicParsing="false" onAction="#ProjectMOnAction" prefHeight="26.0" prefWidth="175.0" text="Project Monitoring" textFill="#fa0000" />
+        <Button layoutX="223.0" layoutY="187.0" mnemonicParsing="false" onAction="#EngOnAction" prefHeight="26.0" prefWidth="175.0" text=" Engagement" textFill="RED" />
+        <Button layoutX="223.0" layoutY="285.0" mnemonicParsing="false" onAction="#CFOnAction" prefHeight="26.0" prefWidth="175.0" text="make annual sales reports " textFill="RED" />
+        <Button layoutX="31.0" layoutY="143.0" mnemonicParsing="false" onAction="#regOnAction" prefHeight="26.0" prefWidth="175.0" text="Registration " textFill="RED" />
+        <Button layoutX="223.0" layoutY="236.0" mnemonicParsing="false" onAction="#TrackOnAction" prefHeight="26.0" prefWidth="175.0" text="tracking sales data" textFill="RED" />
+        <Button layoutX="18.0" layoutY="285.0" mnemonicParsing="false" onAction="#PushOnAction" text="push offers and form relationships " textFill="RED" />
+        <Button layoutX="346.0" layoutY="349.0" mnemonicParsing="false" onAction="#logoutOnAction" text="Logout" textFill="#0e1dbf">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

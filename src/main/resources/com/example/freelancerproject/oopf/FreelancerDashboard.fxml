@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="438.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopf.FreelancerDashboardController">
+   <children>
+      <Label layoutX="100.0" layoutY="71.0" text="Freelancer Dashboard" textFill="RED">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="31.0" layoutY="236.0" mnemonicParsing="false" onAction="#CMOnAction" prefHeight="26.0" prefWidth="175.0" text="Create Milestones" textFill="RED" />
+      <Button layoutX="223.0" layoutY="143.0" mnemonicParsing="false" onAction="#searchOnAction" prefHeight="26.0" prefWidth="175.0" text="Search Jobs" textFill="#fc0000" />
+      <Button layoutX="31.0" layoutY="187.0" mnemonicParsing="false" onAction="#SPOnAction" prefHeight="26.0" prefWidth="175.0" text="Send Proposals" textFill="#fa0000" />
+      <Button layoutX="223.0" layoutY="187.0" mnemonicParsing="false" onAction="#GHOnAction" prefHeight="26.0" prefWidth="175.0" text="Get Hired" textFill="RED" />
+      <Button layoutX="223.0" layoutY="285.0" mnemonicParsing="false" onAction="#CFOnAction" prefHeight="26.0" prefWidth="175.0" text="Client FeedBack" textFill="RED" />
+      <Button layoutX="31.0" layoutY="143.0" mnemonicParsing="false" onAction="#regOnAction" prefHeight="26.0" prefWidth="175.0" text="Registration" textFill="RED" />
+      <Button layoutX="223.0" layoutY="236.0" mnemonicParsing="false" onAction="#GPOnAction" prefHeight="26.0" prefWidth="175.0" text="Get Payment" textFill="RED" />
+      <Button layoutX="31.0" layoutY="286.0" mnemonicParsing="false" onAction="#RAQOnAction" prefHeight="26.0" prefWidth="175.0" text="Reviews and Answer Question" textFill="RED" />
+      <Button layoutX="346.0" layoutY="349.0" mnemonicParsing="false" onAction="#logoutOnAction" text="Logout" textFill="#0e1dbf">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
