@@ -146,12 +146,12 @@ public class DashBoardFxmlController
     public void signoutButton(ActionEvent actionEvent) throws IOException {
 
         Parent root = null ;
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Admin/ReportFxml.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Admin/DashBoardFxml.fxml"));
         root = fxmlLoader.load();
         Scene scene = new Scene(root) ;
         Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         stage.setScene(scene);
-        stage.setTitle("Report");
+        stage.setTitle("Login");
         stage.show();
     }
 }

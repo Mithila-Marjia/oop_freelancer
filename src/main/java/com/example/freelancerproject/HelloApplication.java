@@ -11,7 +11,7 @@ import java.net.URL;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        URL resource = HelloApplication.class.getResource("Admin/DashBoardFxml.fxml");
+        URL resource = HelloApplication.class.getResource("CustomerSupport/DashBoardFxml.fxml");
         System.out.println("FXML URL: " + resource);
 
         FXMLLoader fxmlLoader = new FXMLLoader(resource);
