@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.XYChart?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopf.AnnualSalesReportController">
+    <children>
+        <!-- Title Label -->
+        <Label layoutX="180.0" layoutY="20.0" text="Annual Sales Report" textFill="DARKBLUE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <!-- Line Chart for Sales Data -->
+        <LineChart fx:id="salesChart" layoutX="50.0" layoutY="80.0" prefWidth="500.0" prefHeight="250.0">
+            <xAxis>
+                <NumberAxis fx:id="xAxis" label="Months" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxis" label="Sales ($)" />
+            </yAxis>
+            <!-- Initially empty, data will be added dynamically in the controller -->
+        </LineChart>
+
+        <!-- Button: View Detailed Report -->
+        <Button layoutX="50.0" layoutY="350.0" mnemonicParsing="false" onAction="#viewDetailedReportOnAction" prefWidth="200.0" text="View Detailed Report" textFill="DARKRED" />
+
+        <!-- Button: Export Report -->
+        <Button layoutX="250.0" layoutY="350.0" mnemonicParsing="false" onAction="#exportReportOnAction" prefWidth="200.0" text="Export Report" textFill="DARKRED" />
+
+        <!-- Button: Logout -->
+        <Button layoutX="450.0" layoutY="400.0" mnemonicParsing="false" onAction="#logoutOnAction" text="Logout" textFill="#0e1dbf">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
